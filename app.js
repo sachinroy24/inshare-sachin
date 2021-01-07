@@ -18,6 +18,6 @@ app.use("/api/files",require("./routes/files.js"));
 app.use("/files",require("./routes/show.js"));
 app.use("/files/download",require("./routes/download.js"));
 
-app.listen("3000",function () {
+app.listen(process.env.PORT||3000,function () {
     console.log("The server has been started");
 });
